@@ -1,42 +1,85 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Ensure the logo is properly sized */
+.logo-container img {
+  max-height: 50px;
+  width: auto;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Make the navigation responsive */
+@media (max-width: 1024px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    padding-top: 1rem;
+  }
+  
+  .nav-links a {
+    padding: 0.5rem 0;
+    width: 100%;
+    text-align: left;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Ensure charts are responsive */
+.recharts-responsive-container {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 300px;
+}
+
+@media (max-width: 768px) {
+  .recharts-responsive-container {
+    min-height: 250px;
   }
 }
 
-.card {
-  padding: 2em;
+/* Improve table responsiveness */
+.responsive-table {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
-.read-the-docs {
-  color: #888;
+/* Ensure proper spacing on mobile */
+@media (max-width: 640px) {
+  .mobile-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .mobile-text-center {
+    text-align: center;
+  }
+  
+  .mobile-stack {
+    flex-direction: column;
+  }
+  
+  .mobile-full-width {
+    width: 100%;
+  }
+}
+
+/* Improve accessibility */
+:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Ensure proper contrast for text */
+.text-contrast-improved {
+  color: #1f2937;
+}
+
+.bg-light-improved {
+  background-color: #f9fafb;
+}
+
+/* Touch-friendly targets */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
 }
